@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -44,9 +46,12 @@ TagManager:
   - name: Fondo
     uniqueID: 1592592905
     locked: 0
+  - name: Particula
+    uniqueID: 2846196781
+    locked: 0
   - name: Jugador
     uniqueID: 2464174929
     locked: 0
-  - name: Particula
-    uniqueID: 2846196781
+  - name: ParticulaNave
+    uniqueID: 517770137
     locked: 0
