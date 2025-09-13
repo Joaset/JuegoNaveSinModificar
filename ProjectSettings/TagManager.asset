@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Bullet
+  - Meteo
   layers:
   - Default
   - TransparentFX
@@ -15,9 +16,9 @@ TagManager:
   - UI
   - Jugador
   - Bala
-  - 
-  - 
-  - 
+  - BalaEnemigo
+  - Meteoro
+  - Enemigo
   - 
   - 
   - 

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7370060243333598129}
   - component: {fileID: 862066215448779352}
   - component: {fileID: 8338704655697005196}
+  - component: {fileID: 3013595248277716022}
   m_Layer: 6
   m_Name: Sega
   m_TagString: Player
@@ -226,6 +227,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3013595248277716022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023897493570805993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd45f6a03a983a7448b383b5d280c866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2274305282034979201
 GameObject:
   m_ObjectHideFlags: 0

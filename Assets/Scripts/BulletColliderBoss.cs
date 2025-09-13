@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class PlayerCollider : MonoBehaviour
+public class BulletColliderBoss : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             GameManager.Instance.vidaMaxima -= 25f;
+        }
+
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
         }
     }
 }

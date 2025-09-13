@@ -12,12 +12,12 @@ public class SpawnPlayer : MonoBehaviour
     {
         if (GameManager.Instance.jugador == 1)
         {
-            Instantiate(nave,spawnPlayer.position,Quaternion.identity);
+            Instantiate(nave,spawnPlayer.position, nave.transform.rotation);
         }
 
         if (GameManager.Instance.jugador == 2)
         {
-            Instantiate(nave2, spawnPlayer.position, Quaternion.identity);
+            Instantiate(nave2, spawnPlayer.position, nave2.transform.rotation);
         }
     }
 }

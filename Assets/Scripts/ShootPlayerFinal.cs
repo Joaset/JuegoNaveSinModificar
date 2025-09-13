@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootPlayer : MonoBehaviour
+public class ShootPlayerFinal : MonoBehaviour
 {
-    [SerializeField] private Transform firePoint;
+    [SerializeField] private Transform firePoint2;
+    [SerializeField] private Transform firePoint3;
     [SerializeField] private GameObject bullet;
     private bool puedeDisparar;
     [SerializeField] private float tiempoEntreAtaques;
@@ -28,7 +29,8 @@ public class ShootPlayer : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump") && tiempoSiguienteAtaque <= 0 && puedeDisparar == true)
         {
-            Instantiate(bullet, firePoint.position, firePoint.rotation);
+            Instantiate(bullet, firePoint2.position, firePoint2.rotation);
+            Instantiate(bullet, firePoint3.position, firePoint3.rotation);
             AudioManager.Instance.PlayAudio(AudioManager.Instance.shoot);
             tiempoSiguienteAtaque = tiempoEntreAtaques;
         }

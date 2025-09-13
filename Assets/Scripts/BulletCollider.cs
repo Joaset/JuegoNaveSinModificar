@@ -9,10 +9,11 @@ public class BulletCollider : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             GameManager.Instance.puntajeTotal += 10f;
+            Destroy(gameObject);
         }
 
 
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Meteo"))
         {
             Destroy(gameObject);
         }
