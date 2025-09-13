@@ -11,5 +11,9 @@ public class PlayerCollider : MonoBehaviour
         {
             GameManager.Instance.vidaMaxima -= 25f;
         }
+        if (collision.gameObject.CompareTag("EnemyCuracion"))
+        {
+            GameManager.Instance.vidaMaxima += 25f;
+        }
     }
 }
