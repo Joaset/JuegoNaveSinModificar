@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -8,7 +9,16 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        speed = new Vector3(2f, 0f, 0f); // velocidad en unidades/segundo
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+          speed = new Vector3(2f, 0f, 0f); // velocidad en unidades/segundo  
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            speed = new Vector3(3f, 0f, 0f); // velocidad en unidades/segundo  
+        }
+        
+
     }
     void Update()
     {

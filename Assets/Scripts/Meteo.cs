@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Meteo : MonoBehaviour
 {
@@ -8,7 +9,15 @@ public class Meteo : MonoBehaviour
 
     void Start()
     {
-        speed = new Vector3(0f, 2f, 0f); // velocidad en unidades/segundo
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            speed = new Vector3(2f, 0f, 0f); // velocidad en unidades/segundo
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            speed = new Vector3(0f, 2f, 0f); // velocidad en unidades/segundo
+        }
+
     }
     void Update()
     {

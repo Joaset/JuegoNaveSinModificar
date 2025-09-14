@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 736612487920604044}
   - component: {fileID: 5584440988929771227}
   - component: {fileID: 3442958627838778717}
-  - component: {fileID: -7034094840913046224}
+  - component: {fileID: 6911299127337738086}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
@@ -37,6 +37,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5271769990868426502}
+  - {fileID: 2976707698080082804}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2388704345050067579
@@ -203,7 +204,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 2894510064424783004, guid: e0b4f64b3f64c54478b71d39e4844b63, type: 3}
   itemPoint: {fileID: 5271769990868426502}
   itemVida: 0
---- !u!114 &-7034094840913046224
+--- !u!114 &6911299127337738086
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,10 +213,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 198847049124074737}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a93c7c0c897781f419f332266d2f274d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f64e2601256fb340a2a3a0a0651fe91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.5
+  PowerUpPrefab: {fileID: 2894510064424783004, guid: deb64af0cef3418479aa7e2c11f9d96e, type: 3}
+  PowerUpPoint: {fileID: 2976707698080082804}
+  itemPowerUp: 0
 --- !u!1 &5098333828336045200
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +242,37 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5098333828336045200}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1982149494793823610}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9092097376259340488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2976707698080082804}
+  m_Layer: 0
+  m_Name: SpawnPowerUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2976707698080082804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9092097376259340488}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
