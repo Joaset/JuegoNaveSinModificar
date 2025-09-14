@@ -8,7 +8,7 @@ public class MeteoCollider : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.vidaMaxima -= 25f;
+            collision.gameObject.GetComponent<Player>().RestarVida();
         }
 
 
