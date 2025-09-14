@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &139193665773431479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5710141335707788647}
+  m_Layer: 0
+  m_Name: ShootPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5710141335707788647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139193665773431479}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.442, y: 0.25, z: -0.01829986}
+  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3594116055661573804}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2357793935068839256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4034323630495530712}
+  m_Layer: 0
+  m_Name: ShootPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4034323630495530712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2357793935068839256}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.442, y: -0.265, z: -0.01829986}
+  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3594116055661573804}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6916758493585009243
 GameObject:
   m_ObjectHideFlags: 0
@@ -4945,6 +5007,8 @@ Transform:
   m_Children:
   - {fileID: 3919375983601392950}
   - {fileID: 2068759408952946209}
+  - {fileID: 5710141335707788647}
+  - {fileID: 4034323630495530712}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4237982847844062033
@@ -5046,7 +5110,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2068759408952946209}
+  firePoint1: {fileID: 5710141335707788647}
+  firePoint2: {fileID: 4034323630495530712}
   bullet: {fileID: 1926137182683865780, guid: 1c74dc565a59c4d4b893ebb52a2f8230, type: 3}
+  bullet2: {fileID: 1926137182683865780, guid: 1c74dc565a59c4d4b893ebb52a2f8230, type: 3}
   tiempoEntreAtaques: 0.5
   tiempoSiguienteAtaque: 0
 --- !u!114 &4487313795222896198
@@ -5145,3 +5212,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd45f6a03a983a7448b383b5d280c866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorOriginal: {r: 0, g: 0, b: 0, a: 0}
+  spriteRenderer: {fileID: 0}
