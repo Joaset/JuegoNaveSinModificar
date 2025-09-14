@@ -11,5 +11,9 @@ public class PlayerCollider : MonoBehaviour
         {
             GetComponent<Player>().RestarVida();
         }
+        if (collision.gameObject.CompareTag("EnemyCuracion"))
+        {
+            GameManager.Instance.vidaMaxima += 25f;
+        }
     }
 }
