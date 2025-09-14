@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyCollider : MonoBehaviour
 {
+    public float probabilidadPowerUp = 0.1f; // para la probabilidad del power up
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -20,6 +21,12 @@ public class EnemyCollider : MonoBehaviour
             if (GameManager.Instance.puntajeTotal == 100)
             {
                 GetComponent<SpawnItem>().CrearItemVida();
+            }
+            if (Random.value < probabilidadPowerUp)
+            {
+                // Si tiene componente SpawnPowerUp
+                SpawnPowerUp spPower = GetComponent<SpawnPowerUp>();
+                if (spPower != null) spPower.CrearItemPowerUp();
             }
         }
     }
