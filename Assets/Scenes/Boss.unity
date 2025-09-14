@@ -807,7 +807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 100
   puntajeTotal: 0
-  jugador: 2
+  jugador: 1
 --- !u!4 &636732916
 Transform:
   m_ObjectHideFlags: 0
@@ -1589,6 +1589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeBoss: 0
+  colorOriginal: {r: 0, g: 0, b: 0, a: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!114 &1261206183
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Level2 : MonoBehaviour
+public class Level3 : MonoBehaviour
 {
     void Update()
     {
-        if (GameManager.Instance.puntajeTotal == 750)
+        if (GameManager.Instance.puntajeTotal == 2000)
         {
+            AudioManager.Instance.StopAudio(AudioManager.Instance.backgroundMusic);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

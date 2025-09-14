@@ -26,5 +26,9 @@ public class Meteo : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (SceneManager.GetActiveScene().buildIndex == 3 && transform.position.x <= (-10))
+        {
+            Destroy(gameObject);
+        }
     }
 }
