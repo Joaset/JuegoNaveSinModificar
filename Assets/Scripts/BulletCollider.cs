@@ -12,6 +12,12 @@ public class BulletCollider : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.CompareTag("EnemyCuracion"))
+        {
+            GameManager.Instance.vidaMaxima += 25f;
+            Destroy(gameObject);
+        }
+
 
         if (collision.gameObject.CompareTag("Meteo"))
         {

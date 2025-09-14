@@ -10,7 +10,7 @@ public class LifeCollider : MonoBehaviour
         {
             Destroy(gameObject);
             AudioManager.Instance.PlayAudio(AudioManager.Instance.life);
-            GameManager.Instance.vidaMaxima += 100f;
+            collision.gameObject.GetComponent<Player>().AumentarVidaItem();
         }
     }
 }

@@ -13,7 +13,7 @@ public class BossCollider : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.vidaMaxima -= 25f;
+            collision.gameObject.GetComponent<Player>().RestarVida();
         }
     }
 }

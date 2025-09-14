@@ -15,14 +15,14 @@ public class SpawnerEnemy : MonoBehaviour
         Camera cam = Camera.main;
         float limiteY = cam.orthographicSize;
 
-        // Instanciamos primero para poder calcular el tamaño real del sprite
+        // Instanciamos primero para poder calcular el tamaï¿½o real del sprite
         GameObject enemy = Instantiate(enemyPrefab, Vector3.zero, Quaternion.identity);
 
         // Obtenemos la mitad del alto del sprite
         SpriteRenderer sr = enemy.GetComponent<SpriteRenderer>();
         float mitadAlto = sr.bounds.extents.y;
 
-        // Calculamos una posición Y válida
+        // Calculamos una posiciï¿½n Y vï¿½lida
         float enemyOrigenVertical = Random.Range(-limiteY + mitadAlto, limiteY - mitadAlto);
 
         // Colocamos el enemigo en X fijo (fuera de la pantalla) y en Y calculado

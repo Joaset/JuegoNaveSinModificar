@@ -15,6 +15,21 @@ public class ScoreCount : MonoBehaviour
 
     void Update()
     {
-        textMesh.text = "Puntaje: " + GameManager.Instance.puntajeTotal.ToString() + "/250";
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            textMesh.text = "Puntaje: " + GameManager.Instance.puntajeTotal.ToString() + "/250";
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            textMesh.text = "Puntaje: " + GameManager.Instance.puntajeTotal.ToString() + "/750";
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            textMesh.text = "Puntaje: " + GameManager.Instance.puntajeTotal.ToString() + "/2000";
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            textMesh.text = "Puntaje: " + GameManager.Instance.puntajeTotal.ToString();
+        }
     }
 }
