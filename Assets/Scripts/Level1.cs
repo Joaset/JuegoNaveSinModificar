@@ -22,7 +22,7 @@ public class Level1 : MonoBehaviour
             if (pixelEffect != null)
             {
                 int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
-                pixelEffect.PlayPixelateEffect(40f, 0.7f, nextIndex);
+                pixelEffect.PlayPixelateEffect(40f, 0.5f, nextIndex);
             }
             else
             {
@@ -32,11 +32,11 @@ public class Level1 : MonoBehaviour
         }
     }
 
-    private string GetNextSceneName()
-    {
-        // Podés usar esto si querés por nombre
-        int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        return SceneManager.GetSceneByBuildIndex(nextIndex).name;
-    }
+    //private string GetNextSceneName()
+    //{
+    //    // Podés usar esto si querés por nombre
+    //    int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+    //    return SceneManager.GetSceneByBuildIndex(nextIndex).name;
+    //}
 }
 

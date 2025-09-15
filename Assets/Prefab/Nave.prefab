@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 6916758493585009243}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0.24000017, y: 0.11000012, z: 0}
-  m_LocalScale: {x: 1, y: 0.9123372, z: 0.6641177}
+  m_LocalPosition: {x: 0.284, y: 0.11000012, z: 0}
+  m_LocalScale: {x: 1, y: 1.1860383, z: 0.6641177}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3919375983601392950}
@@ -4796,8 +4796,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1448770515
-  m_SortingLayer: 2
+  m_SortingLayerID: 517770137
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -4940,7 +4940,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.65, y: -1.08, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3919375983601392950}
@@ -5145,3 +5145,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd45f6a03a983a7448b383b5d280c866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorOriginal: {r: 0, g: 0, b: 0, a: 0}
+  spriteRenderer: {fileID: 0}
