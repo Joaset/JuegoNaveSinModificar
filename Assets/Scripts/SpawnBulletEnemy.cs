@@ -18,7 +18,6 @@ public class SpawnBulletEnemy : MonoBehaviour
     private void Disparar()
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
-        AudioManager.Instance.PlayAudio(AudioManager.Instance.shoot);
     }
 
     private IEnumerator DispararContinuo()

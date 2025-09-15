@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnerEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab; // Asignar el prefab en el Inspector
+    [SerializeField] private int tipoEnemigo;
 
     void Start()
     {
@@ -34,8 +36,34 @@ public class SpawnerEnemy : MonoBehaviour
     {
         while (true) // bucle infinito como setInterval
         {
-            CreateEnemy();
-            yield return new WaitForSeconds(1f);
+            if (SceneManager.GetActiveScene().buildIndex == 2)
+            {
+                CreateEnemy();
+                yield return new WaitForSeconds(1f);
+            }
+            if (SceneManager.GetActiveScene().buildIndex == 3)
+            {
+                CreateEnemy();
+                yield return new WaitForSeconds(0.5f);
+            }
+            if (SceneManager.GetActiveScene().buildIndex == 4)
+            {
+                if (tipoEnemigo == 1)
+                {
+                    CreateEnemy();
+                    yield return new WaitForSeconds(0.3f);
+                }
+                if (tipoEnemigo == 2)
+                {
+                    CreateEnemy();
+                    yield return new WaitForSeconds(1.2f);
+                }
+                if (tipoEnemigo == 3)
+                {
+                    CreateEnemy();
+                    yield return new WaitForSeconds(5f);
+                }
+            }
         }
     }
 }
