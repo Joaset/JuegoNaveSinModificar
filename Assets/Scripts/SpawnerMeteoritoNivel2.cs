@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerEnemy : MonoBehaviour
+public class SpawnerMeteoritoNivel2 : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab; // Asignar el prefab en el Inspector
 
@@ -15,14 +15,14 @@ public class SpawnerEnemy : MonoBehaviour
         Camera cam = Camera.main;
         float limiteY = cam.orthographicSize;
 
-        // Instanciamos primero para poder calcular el tamaï¿½o real del sprite
+        // Instanciamos primero para poder calcular el tamaño real del sprite
         GameObject enemy = Instantiate(enemyPrefab, Vector3.zero, Quaternion.identity);
 
         // Obtenemos la mitad del alto del sprite
         SpriteRenderer sr = enemy.GetComponent<SpriteRenderer>();
         float mitadAlto = sr.bounds.extents.y;
 
-        // Calculamos una posiciï¿½n Y vï¿½lida
+        // Calculamos una posición Y válida
         float enemyOrigenVertical = Random.Range(-limiteY + mitadAlto, limiteY - mitadAlto);
 
         // Colocamos el enemigo en X fijo (fuera de la pantalla) y en Y calculado

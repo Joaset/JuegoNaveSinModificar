@@ -6,24 +6,33 @@ using UnityEngine.SceneManagement;
 public class Boss : MonoBehaviour
 {
     [SerializeField] float lifeBoss;
+    Animator animator;
+    [SerializeField] private Color colorOriginal;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
     void Start()
     {
         AudioManager.Instance.PlayAudio(AudioManager.Instance.boss);
         lifeBoss = 2000f;
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        colorOriginal = spriteRenderer.color;
     }
 
     public void RestarVida()
     {
-        if (lifeBoss > 0)
+        if (lifeBoss >= 10)
         {
             lifeBoss -= 10f;
+            StartCoroutine(CambiarColor(Color.red));
         }
         else
         {
+            GetComponent<CapsuleCollider2D>().enabled = false;
             StartCoroutine("CambiarEscena");
             AudioManager.Instance.StopAudio(AudioManager.Instance.boss);
             AudioManager.Instance.PlayAudio(AudioManager.Instance.bossDead);
-            GetComponent<CapsuleCollider2D>().enabled = false;
+            animator.SetBool("IsDead",true);
         }
     }
 
@@ -33,6 +42,14 @@ public class Boss : MonoBehaviour
         AudioManager.Instance.StopAudio(AudioManager.Instance.backgroundBoss);
         SceneManager.LoadScene(7);
     }
+
+    IEnumerator CambiarColor(Color nuevoColor)
+    {
+        spriteRenderer.color = nuevoColor;
+        yield return new WaitForSeconds(0.2f); // dura 0.2 segundos
+        spriteRenderer.color = colorOriginal; // vuelve al color original
+    }
+
     public float GetVida()
     {
         return lifeBoss;

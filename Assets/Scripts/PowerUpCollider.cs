@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LifeCollider : MonoBehaviour
+public class PowerUpCollider : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -10,7 +10,7 @@ public class LifeCollider : MonoBehaviour
         {
             Destroy(gameObject);
             AudioManager.Instance.PlayAudio(AudioManager.Instance.life);
-            collision.gameObject.GetComponent<Player>().AumentarVidaItem();
+            GameManager.Instance.vidaMaxima += 100f;
         }
     }
 }
