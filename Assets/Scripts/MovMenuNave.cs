@@ -13,7 +13,7 @@ public class MovMenuNave : MonoBehaviour
     void Update()
     {
       transform.position += speed*Time.deltaTime;
-        if (transform.position.x >= (10.92))
+        if (transform.position.x >= (12))
         {
             transform.position = new Vector3(-9.39f, transform.position.y, transform.position.z);
         }

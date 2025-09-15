@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Level1 : MonoBehaviour
 {
+    private bool transitionStarted = false;
+
     void Start()
     {
         AudioManager.Instance.PlayAudio(AudioManager.Instance.backgroundMusic);
@@ -12,9 +14,29 @@ public class Level1 : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.Instance.puntajeTotal == 250)
+        if (!transitionStarted && GameManager.Instance.puntajeTotal >= 250)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            transitionStarted = true;
+
+            var pixelEffect = FindObjectOfType<PixelateEffect>();
+            if (pixelEffect != null)
+            {
+                int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+                pixelEffect.PlayPixelateEffect(40f, 0.5f, nextIndex);
+            }
+            else
+            {
+                // Fallback: carga directa si el efecto no está presente
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
+
+    //private string GetNextSceneName()
+    //{
+    //    // Podés usar esto si querés por nombre
+    //    int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+    //    return SceneManager.GetSceneByBuildIndex(nextIndex).name;
+    //}
 }
+
