@@ -5,11 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class Level2 : MonoBehaviour
 {
+    private bool transitionStarted = false;
     void Update()
     {
-        if (GameManager.Instance.puntajeTotal == 750)
+        if (!transitionStarted && GameManager.Instance.puntajeTotal >= 750)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            transitionStarted = true;
+
+            var pixelEffect = FindObjectOfType<PixelateEffect>();
+            if (pixelEffect != null)
+            {
+                int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+                pixelEffect.PlayPixelateEffect(40f, 0.5f, nextIndex);
+            }
+            else
+            {
+                // Fallback: carga directa si el efecto no está presente
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
 }

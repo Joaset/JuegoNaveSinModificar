@@ -1261,7 +1261,7 @@ Transform:
   m_GameObject: {fileID: 1101144254}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.29, y: -0.58, z: -0.059296016}
+  m_LocalPosition: {x: 9.03, y: -0.58, z: -0.059296016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1280,6 +1280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 198847049124074737, guid: 8797de1c0a5bbb643beb2ae438c79860, type: 3}
+  tipoEnemigo: 1
 --- !u!1 &1177620264
 GameObject:
   m_ObjectHideFlags: 0

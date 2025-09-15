@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.position += speed * Time.deltaTime;
-        if (transform.position.x >= (10.92))
+        if (transform.position.x >= (9))
         {
             Destroy(gameObject);
         }

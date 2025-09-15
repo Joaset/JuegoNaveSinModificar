@@ -12,9 +12,15 @@ public class BulletCollider : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.CompareTag("EnemyRojo"))
+        {
+            GameManager.Instance.puntajeTotal += 20f;
+            Destroy(gameObject);
+        }
+
         if (collision.gameObject.CompareTag("EnemyCuracion"))
         {
-            GameManager.Instance.vidaMaxima += 25f;
+            FindAnyObjectByType<Player>().AumentarVida();
             Destroy(gameObject);
         }
 

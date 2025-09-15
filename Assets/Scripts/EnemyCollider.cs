@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyCollider : MonoBehaviour
 {
-    public float probabilidadPowerUp = 0.1f; // para la probabilidad del power up
+    public float probabilidadPowerUp = 0.03f; // para la probabilidad del power up
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

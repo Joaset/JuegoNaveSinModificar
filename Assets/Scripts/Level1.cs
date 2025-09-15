@@ -31,12 +31,5 @@ public class Level1 : MonoBehaviour
             }
         }
     }
-
-    //private string GetNextSceneName()
-    //{
-    //    // Podés usar esto si querés por nombre
-    //    int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
-    //    return SceneManager.GetSceneByBuildIndex(nextIndex).name;
-    //}
 }
 
