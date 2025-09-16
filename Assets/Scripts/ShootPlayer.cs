@@ -13,12 +13,14 @@ public class ShootPlayer : MonoBehaviour
     private bool puedeDisparar;
     [SerializeField] private float tiempoEntreAtaques;
     [SerializeField] private float tiempoSiguienteAtaque;
+    private bool itemCreado;
 
     private bool disparoDoble = false;
 
     void Start()
     {
         puedeDisparar = true;
+        itemCreado = false;
     }
 
     void Update()
@@ -35,11 +37,11 @@ public class ShootPlayer : MonoBehaviour
         if (!disparoDoble)
         {
             if (Input.GetButtonDown("Jump") && tiempoSiguienteAtaque <= 0 && puedeDisparar == true)
-        {
+            {
             Instantiate(bullet, firePoint.position, firePoint.rotation);
             AudioManager.Instance.PlayAudio(AudioManager.Instance.shoot);
             tiempoSiguienteAtaque = tiempoEntreAtaques;
-        }
+            }
         }
         else
         {
@@ -64,5 +66,16 @@ public class ShootPlayer : MonoBehaviour
     void DesactivarDisparoDoble()
     {
         disparoDoble = false;
+        FindAnyObjectByType<ShootPlayer>().SetItemCreado(false);
+    }
+
+    public bool GetItemCreado()
+    {
+        return itemCreado;
+    }
+
+    public void SetItemCreado(bool item)
+    {
+        itemCreado = item;
     }
 }

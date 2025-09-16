@@ -22,11 +22,12 @@ public class EnemyCollider : MonoBehaviour
             {
                 GetComponent<SpawnItem>().CrearItemVida();
             }
-            if (Random.value < probabilidadPowerUp)
+            if (Random.value < probabilidadPowerUp && FindAnyObjectByType<ShootPlayer>().GetItemCreado() == false)
             {
                 // Si tiene componente SpawnPowerUp
                 SpawnPowerUp spPower = GetComponent<SpawnPowerUp>();
                 if (spPower != null) spPower.CrearItemPowerUp();
+                FindAnyObjectByType<ShootPlayer>().SetItemCreado(true);
             }
         }
     }
