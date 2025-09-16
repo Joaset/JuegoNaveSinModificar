@@ -37,8 +37,10 @@ public class Player : MonoBehaviour
         {
             GameManager.Instance.vidaMaxima += 25;
             StartCoroutine(CambiarColor(Color.green));
+            AudioManager.Instance.PlayAudio(AudioManager.Instance.life);
+            
         }
-        else
+        else if (GameManager.Instance.vidaMaxima > 75 && GameManager.Instance.vidaMaxima <= 100)
         {
             GameManager.Instance.vidaMaxima = 100;
         }

@@ -21,12 +21,12 @@ public class Boss : MonoBehaviour
 
     public void RestarVida()
     {
+        lifeBoss -= 10f;
         if (lifeBoss >= 10)
         {
-            lifeBoss -= 10f;
             StartCoroutine(CambiarColor(Color.red));
         }
-        else
+        else if(lifeBoss == 0)
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
             StartCoroutine("CambiarEscena");

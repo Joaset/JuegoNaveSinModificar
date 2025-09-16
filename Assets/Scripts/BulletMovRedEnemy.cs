@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletMovRedEnemy : MonoBehaviour
 {
-    [SerializeField] private float speed = 3f;
+    [SerializeField] private float speed = 4f;
 
     void Update()
     {
