@@ -8,7 +8,7 @@ public class Level2 : MonoBehaviour
     private bool transitionStarted = false;
     void Update()
     {
-        if (!transitionStarted && GameManager.Instance.puntajeTotal >= 750)
+        if (!transitionStarted && GameManager.Instance.puntajeTotal >= 300)//750
         {
             transitionStarted = true;
 
@@ -20,7 +20,7 @@ public class Level2 : MonoBehaviour
             }
             else
             {
-                // Fallback: carga directa si el efecto no está presente
+                // Fallback: carga directa si el efecto no estï¿½ presente
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }

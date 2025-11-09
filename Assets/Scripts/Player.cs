@@ -33,7 +33,17 @@ public class Player : MonoBehaviour
 
     public void AumentarVida()
     {
-        if (GameManager.Instance.vidaMaxima <=75 && GameManager.Instance.vidaMaxima > 0)
+        if (GameManager.Instance.vidaMaxima < 200)
+        {
+             GameManager.Instance.vidaMaxima += 25;
+            StartCoroutine(CambiarColor(Color.green));
+            AudioManager.Instance.PlayAudio(AudioManager.Instance.life);
+        }
+        else
+        {
+            GameManager.Instance.vidaMaxima = 200;
+        }
+        /*if (GameManager.Instance.vidaMaxima <=75 && GameManager.Instance.vidaMaxima > 0)
         {
             GameManager.Instance.vidaMaxima += 25;
             StartCoroutine(CambiarColor(Color.green));
@@ -43,7 +53,7 @@ public class Player : MonoBehaviour
         else if (GameManager.Instance.vidaMaxima > 75 && GameManager.Instance.vidaMaxima <= 100)
         {
             GameManager.Instance.vidaMaxima = 100;
-        }
+        }*/
     }
 
     public void AumentarVidaItem()
