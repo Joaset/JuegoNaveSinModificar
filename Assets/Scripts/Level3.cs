@@ -8,7 +8,7 @@ public class Level3 : MonoBehaviour
     private bool transitionStarted = false;
     void Update()
     {
-        if (!transitionStarted && GameManager.Instance.puntajeTotal >= 2000)//2000
+        if (!transitionStarted && GameManager.Instance.puntajeTotal >= 350)//2000
         {
             AudioManager.Instance.StopAudio(AudioManager.Instance.backgroundMusic);
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

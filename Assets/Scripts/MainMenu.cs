@@ -30,7 +30,8 @@ public class MainMenu : MonoBehaviour
     // 🔹 Ir a la escena de opciones
     public void IrAOpciones()
     {
-        var pixelEffect = FindObjectOfType<PixelateEffect>();
+        SceneManager.LoadScene("Opciones");
+        /*var pixelEffect = FindObjectOfType<PixelateEffect>();
         if (pixelEffect != null)
         {
             pixelEffect.PlayPixelateEffect(40f, 0.5f, 8);
@@ -38,13 +39,14 @@ public class MainMenu : MonoBehaviour
         else
         {
             SceneManager.LoadScene("Opciones");
-        }
+        }*/
     }
 
     // 🔹 Volver al menú principal
     public void VolverMenu()
     {
-        var pixelEffect = FindObjectOfType<PixelateEffect>();
+        SceneManager.LoadScene("Menu");
+        /*var pixelEffect = FindObjectOfType<PixelateEffect>();
         if (pixelEffect != null)
         {
             pixelEffect.PlayPixelateEffect(40f, 0.5f, 0);
@@ -52,7 +54,7 @@ public class MainMenu : MonoBehaviour
         else
         {
             SceneManager.LoadScene("Menu");
-        }
+        }*/
     }
 
     // 🔹 Salir del juego
