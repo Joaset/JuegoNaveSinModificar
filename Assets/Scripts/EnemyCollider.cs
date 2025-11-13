@@ -18,6 +18,7 @@ public class EnemyCollider : MonoBehaviour
         {
             Destroy(gameObject);
             AudioManager.Instance.PlayAudio(AudioManager.Instance.enemydead);
+            gameObject.GetComponent<Explosion>().CrearExplosion();
             if (GameManager.Instance.puntajeTotal == 100)
             {
                 GetComponent<SpawnItem>().CrearItemVida();
