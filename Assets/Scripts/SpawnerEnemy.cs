@@ -36,17 +36,17 @@ public class SpawnerEnemy : MonoBehaviour
     {
         while (true) // bucle infinito como setInterval
         {
-            if (SceneManager.GetActiveScene().buildIndex == 2)
+            if (SceneManager.GetActiveScene().buildIndex == 3)
             {
                 CreateEnemy();
                 yield return new WaitForSeconds(1f);
             }
-            if (SceneManager.GetActiveScene().buildIndex == 3)
+            if (SceneManager.GetActiveScene().buildIndex == 4)
             {
                 CreateEnemy();
                 yield return new WaitForSeconds(0.5f);
             }
-            if (SceneManager.GetActiveScene().buildIndex == 4)
+            if (SceneManager.GetActiveScene().buildIndex == 5)
             {
                 if (tipoEnemigo == 1)
                 {

@@ -13,6 +13,7 @@ public class Win : MonoBehaviour
     public void CambiarMenu()
     {
         AudioManager.Instance.StopAudio(AudioManager.Instance.winMusic);
+        GameManager.Instance.juegoIniciado = false;
         SceneManager.LoadScene(0);
     }
 }

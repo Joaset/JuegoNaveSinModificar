@@ -9,11 +9,11 @@ public class Meteo : MonoBehaviour
 
     void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 3)
+        if (SceneManager.GetActiveScene().buildIndex == 4)
         {
             speed = new Vector3(2f, 0f, 0f); // velocidad en unidades/segundo
         }
-        if (SceneManager.GetActiveScene().buildIndex == 5)
+        if (SceneManager.GetActiveScene().buildIndex == 6)
         {
             speed = new Vector3(0f, 2f, 0f); // velocidad en unidades/segundo
         }

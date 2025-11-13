@@ -7,7 +7,12 @@ public class MainMenu : MonoBehaviour
 {
     void Start()
     {
-        AudioManager.Instance.PlayAudio(AudioManager.Instance.backgroundMusic);
+        if (GameManager.Instance.juegoIniciado == false)
+        {
+            AudioManager.Instance.PlayAudio(AudioManager.Instance.backgroundMusic);
+            GameManager.Instance.juegoIniciado = true;
+        }
+        //AudioManager.Instance.PlayAudio(AudioManager.Instance.backgroundMusic);
         GameManager.Instance.puntajeTotal = 0;
         GameManager.Instance.vidaMaxima = 100;
         GameManager.Instance.jugador = 0;
@@ -27,34 +32,16 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    // 🔹 Ir a la escena de opciones
+    // Ir a la escena de opciones
     public void IrAOpciones()
     {
         SceneManager.LoadScene("Opciones");
-        /*var pixelEffect = FindObjectOfType<PixelateEffect>();
-        if (pixelEffect != null)
-        {
-            pixelEffect.PlayPixelateEffect(40f, 0.5f, 8);
-        }
-        else
-        {
-            SceneManager.LoadScene("Opciones");
-        }*/
     }
 
     // 🔹 Volver al menú principal
     public void VolverMenu()
     {
         SceneManager.LoadScene("Menu");
-        /*var pixelEffect = FindObjectOfType<PixelateEffect>();
-        if (pixelEffect != null)
-        {
-            pixelEffect.PlayPixelateEffect(40f, 0.5f, 0);
-        }
-        else
-        {
-            SceneManager.LoadScene("Menu");
-        }*/
     }
 
     // 🔹 Salir del juego
