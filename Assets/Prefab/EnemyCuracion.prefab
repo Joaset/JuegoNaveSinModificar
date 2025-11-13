@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2032800748649509374}
   - component: {fileID: 4344965639039860120}
   - component: {fileID: -4369496921159199537}
-  - component: {fileID: 6996397178425659498}
+  - component: {fileID: 2337865587304177207}
   m_Layer: 10
   m_Name: EnemyCuracion
   m_TagString: EnemyCuracion
@@ -195,13 +195,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5596367632819618172}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a93c7c0c897781f419f332266d2f274d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.5
---- !u!114 &6996397178425659498
+--- !u!114 &2337865587304177207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,8 +210,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5596367632819618172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30bbdfb94915e224e952edd75bd08f39, type: 3}
+  m_Script: {fileID: 11500000, guid: 6948b22751d7b45448f938b0e7a8547c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 6384820436277374287, guid: c7d2d4dddd0f9d0498811177233f9173, type: 3}
-  naveEnemiga: {fileID: 897072779432776065}
+  speed: 2.5
+  amplitude: 1.5
+  frequency: 2
