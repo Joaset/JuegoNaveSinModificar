@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     {
         if (GameManager.Instance.vidaMaxima <= 0)
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene("GameOver");
             AudioManager.Instance.StopAudio(AudioManager.Instance.backgroundMusic);
             AudioManager.Instance.StopAudio(AudioManager.Instance.boss);
             AudioManager.Instance.StopAudio(AudioManager.Instance.backgroundBoss);

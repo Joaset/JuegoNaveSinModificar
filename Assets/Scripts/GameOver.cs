@@ -14,6 +14,7 @@ public class GameOver : MonoBehaviour
     public void CambiarMenu()
     {
         AudioManager.Instance.StopAudio(AudioManager.Instance.loseMusic);
+        GameManager.Instance.juegoIniciado = false;
         SceneManager.LoadScene(0);
     }
 }

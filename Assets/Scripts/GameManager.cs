@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public float vidaMaxima;
     public float puntajeTotal;
     public float jugador;
+    public bool juegoIniciado = false;
 
     private void Awake()
     {

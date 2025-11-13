@@ -15,19 +15,19 @@ public class NivelScore : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 3)
         {
             textMesh.text = "Nivel - 1 ";
         }
-        if (SceneManager.GetActiveScene().buildIndex == 3)
+        if (SceneManager.GetActiveScene().buildIndex == 4)
         {
             textMesh.text = "Nivel - 2 ";
         }
-        if (SceneManager.GetActiveScene().buildIndex == 4)
+        if (SceneManager.GetActiveScene().buildIndex == 5)
         {
             textMesh.text = "Nivel - 3 ";
         }
-        if (SceneManager.GetActiveScene().buildIndex == 5)
+        if (SceneManager.GetActiveScene().buildIndex == 6)
         {
             textMesh.text = "Nivel - Boss ";
         }

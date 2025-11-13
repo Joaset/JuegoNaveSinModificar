@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5584440988929771227}
   - component: {fileID: 3442958627838778717}
   - component: {fileID: 6911299127337738086}
+  - component: {fileID: 3792356184857118818}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
@@ -220,6 +221,20 @@ MonoBehaviour:
   PowerUpPrefab: {fileID: 2894510064424783004, guid: deb64af0cef3418479aa7e2c11f9d96e, type: 3}
   PowerUpPoint: {fileID: 2976707698080082804}
   itemPowerUp: 0
+--- !u!114 &3792356184857118818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198847049124074737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30bbdfb94915e224e952edd75bd08f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 6384820436277374287, guid: c7d2d4dddd0f9d0498811177233f9173, type: 3}
+  naveEnemiga: {fileID: 1982149494793823610}
 --- !u!1 &5098333828336045200
 GameObject:
   m_ObjectHideFlags: 0

@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 9023775710741795446}
   - component: {fileID: 3592264304199109793}
   - component: {fileID: 7067838143617951401}
+  - component: {fileID: 5100806902689739903}
   m_Layer: 10
   m_Name: enemyRojo
   m_TagString: EnemyRojo
@@ -248,3 +249,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!114 &5100806902689739903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4980921581504921721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30bbdfb94915e224e952edd75bd08f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 6384820436277374287, guid: c7d2d4dddd0f9d0498811177233f9173, type: 3}
+  naveEnemiga: {fileID: 8722604984940519444}
