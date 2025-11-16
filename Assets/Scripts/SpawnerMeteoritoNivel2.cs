@@ -5,6 +5,8 @@ using UnityEngine;
 public class SpawnerMeteoritoNivel2 : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab; // Asignar el prefab en el Inspector
+    [SerializeField] private float margenHUDArriba;
+    [SerializeField] private float margenHUDAbajo;
 
     void Start()
     {
@@ -23,7 +25,7 @@ public class SpawnerMeteoritoNivel2 : MonoBehaviour
         float mitadAlto = sr.bounds.extents.y;
 
         // Calculamos una posición Y válida
-        float enemyOrigenVertical = Random.Range(-limiteY + mitadAlto, limiteY - mitadAlto);
+        float enemyOrigenVertical = Random.Range(-limiteY + mitadAlto + margenHUDAbajo, limiteY - mitadAlto - margenHUDArriba);
 
         // Colocamos el enemigo en X fijo (fuera de la pantalla) y en Y calculado
         float spawnX = cam.orthographicSize * cam.aspect + 1f; // un poquito fuera a la derecha

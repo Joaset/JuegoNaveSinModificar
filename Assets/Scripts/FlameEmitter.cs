@@ -10,7 +10,7 @@ public class FlameEmitter : MonoBehaviour
 
         // --- MAIN ---
         var main = ps.main;
-        main.startLifetime = 1f;            // lifespan: 1000 ms
+        main.startLifetime = 0.5f;            // lifespan: 1000 ms
         main.startSpeed = 3f;              // speed ~200 en Phaser (ajustado a escala Unity)
         main.startSize = 0.4f;              // scale start
         main.startRotation = new ParticleSystem.MinMaxCurve(

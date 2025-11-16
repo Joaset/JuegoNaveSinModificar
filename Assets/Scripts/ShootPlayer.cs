@@ -10,6 +10,7 @@ public class ShootPlayer : MonoBehaviour
 
     [SerializeField] private GameObject bullet;
     [SerializeField] private GameObject bullet2;
+    [SerializeField] private GameObject powerUpActivo;
     private bool puedeDisparar;
     [SerializeField] private float tiempoEntreAtaques;
     [SerializeField] private float tiempoSiguienteAtaque;
@@ -21,6 +22,7 @@ public class ShootPlayer : MonoBehaviour
     {
         puedeDisparar = true;
         itemCreado = false;
+        powerUpActivo = GameObject.Find("CanvasPowerUpActivo");
     }
 
     void Update()
@@ -59,6 +61,7 @@ public class ShootPlayer : MonoBehaviour
     public void ActivarDisparoDoble(float duracion)
     {
         disparoDoble = true;
+        powerUpActivo.GetComponent<CanvasPowerUp>().EmpezarCorrutina();
         CancelInvoke("DesactivarDisparoDoble");
         Invoke("DesactivarDisparoDoble", duracion);
     }

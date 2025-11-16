@@ -9,11 +9,11 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 3)
         {
           speed = new Vector3(2f, 0f, 0f); // velocidad en unidades/segundo  
         }
-        if (SceneManager.GetActiveScene().buildIndex == 3 || SceneManager.GetActiveScene().buildIndex == 4)
+        if (SceneManager.GetActiveScene().buildIndex == 4 || SceneManager.GetActiveScene().buildIndex == 5)
         {
             speed = new Vector3(3f, 0f, 0f); // velocidad en unidades/segundo  
         }
