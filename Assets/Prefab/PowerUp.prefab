@@ -5026,7 +5026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 2
-  margenHUD: 0.8
+  margenHUD: 1.5
 --- !u!114 &-1858814459048586011
 MonoBehaviour:
   m_ObjectHideFlags: 0

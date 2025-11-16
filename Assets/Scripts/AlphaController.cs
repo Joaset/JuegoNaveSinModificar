@@ -6,8 +6,8 @@ public class AlphaController : MonoBehaviour
     [SerializeField] private Image imagen;          // Referencia al objeto Image
     [SerializeField] private float alphaInicial = 45f;
     [SerializeField] private float alphaFinal = 200f;
-    [SerializeField] private float escalaMin = 0.9f;
-    [SerializeField] private float escalaMax = 1.1f;
+    [SerializeField] private float escalaMin = 1.9f;
+    [SerializeField] private float escalaMax = 2.1f;
     [SerializeField] private float duracion = 2f;   // Tiempo del ciclo completo
 
     private float tiempo = 0f;
