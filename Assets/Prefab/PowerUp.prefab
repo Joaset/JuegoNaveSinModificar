@@ -5026,6 +5026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 2
+  margenHUD: 0.8
 --- !u!114 &-1858814459048586011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5038,3 +5039,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d2c10d78196bd4f9012e454d356c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duracion: 7

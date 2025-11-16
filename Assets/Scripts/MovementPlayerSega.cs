@@ -11,6 +11,8 @@ public class MovementPlayerSega : MonoBehaviour
     private float mitadAncho;
     private float mitadAlto;
     private Animator animator;
+    [SerializeField] private float hudAbajo;   // Altura del HUD inferior en unidades
+    [SerializeField] private float hudArriba;  // Altura del HUD superior en unidades
 
     void Start()
     {
@@ -60,7 +62,7 @@ public class MovementPlayerSega : MonoBehaviour
 
         // Ajustar límites restando el tamaño de la nave
         float x = Mathf.Clamp(transform.position.x, -limiteX + mitadAncho, limiteX - mitadAncho);
-        float y = Mathf.Clamp(transform.position.y, -limiteY + mitadAlto, limiteY - mitadAlto);
+        float y = Mathf.Clamp(transform.position.y, -limiteY + mitadAlto + hudAbajo, limiteY - mitadAlto - hudArriba);
         transform.position = new Vector3(x, y, transform.position.z);
     }
 }

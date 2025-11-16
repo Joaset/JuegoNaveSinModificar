@@ -4964,6 +4964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 3
+  margenHUD: 0.8
 --- !u!50 &7136714385095854778
 Rigidbody2D:
   serializedVersion: 4

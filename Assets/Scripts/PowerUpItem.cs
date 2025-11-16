@@ -9,6 +9,7 @@ public class PowerUpItem : MonoBehaviour
     private Camera cam;
     private float limiteX, limiteY;
     private float mitadAncho, mitadAlto;
+    [SerializeField] private float margenHUD; // ajustalo según tu HUD
 
     void Start()
     {
@@ -50,9 +51,9 @@ public class PowerUpItem : MonoBehaviour
             pos.y = limiteY - mitadAlto;
             rb.velocity = new Vector2(rb.velocity.x, -rb.velocity.y);
         }
-        else if (pos.y - mitadAlto <= -limiteY)
+        else if (pos.y - mitadAlto <= (-limiteY + margenHUD))
         {
-            pos.y = -limiteY + mitadAlto;
+            pos.y = (-limiteY + margenHUD) + mitadAlto;
             rb.velocity = new Vector2(rb.velocity.x, -rb.velocity.y);
         }
 
