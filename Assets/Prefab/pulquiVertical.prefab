@@ -5212,5 +5212,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
-  hudAbajo: 0.8
+  hudAbajo: 1.5
   hudArriba: 0

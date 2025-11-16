@@ -8,7 +8,7 @@ public class Level2 : MonoBehaviour
     private bool transitionStarted = false;
     void Update()
     {
-        if (!transitionStarted && GameManager.Instance.puntajeTotal >= 300)//750
+        if (!transitionStarted && GameManager.Instance.puntajeTotal >= 750)//750
         {
             transitionStarted = true;
 

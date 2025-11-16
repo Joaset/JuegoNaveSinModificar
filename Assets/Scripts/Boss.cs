@@ -40,7 +40,7 @@ public class Boss : MonoBehaviour
     {
         yield return new WaitForSeconds(4f);
         AudioManager.Instance.StopAudio(AudioManager.Instance.backgroundBoss);
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene("Win");
     }
 
     IEnumerator CambiarColor(Color nuevoColor)

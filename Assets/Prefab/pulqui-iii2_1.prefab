@@ -169,6 +169,7 @@ MonoBehaviour:
   firePoint2: {fileID: 7566402007186828451}
   bullet: {fileID: 1926137182683865780, guid: 1c74dc565a59c4d4b893ebb52a2f8230, type: 3}
   bullet2: {fileID: 1926137182683865780, guid: 1c74dc565a59c4d4b893ebb52a2f8230, type: 3}
+  powerUpActivo: {fileID: 0}
   tiempoEntreAtaques: 0.5
   tiempoSiguienteAtaque: 0
 --- !u!114 &2000805412164284490
@@ -184,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
-  hudAbajo: 0.8
+  hudAbajo: 1.5
   hudArriba: 0
 --- !u!50 &3284542086863350049
 Rigidbody2D:
